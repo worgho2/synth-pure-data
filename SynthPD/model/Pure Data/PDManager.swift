@@ -1,5 +1,5 @@
 //
-//  pd-manager.swift
+//  PDManager.swift
 //  SynthPD
 //
 //  Created by otavio on 10/12/20.
@@ -10,7 +10,6 @@ import libpd_ios
 
 class PDManager {
     private let controller: PdAudioController
-    
     
     
     init() {

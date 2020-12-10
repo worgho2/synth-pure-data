@@ -14,7 +14,7 @@
 		7A8A7883258280D700D0831A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8A7882258280D700D0831A /* Assets.xcassets */; };
 		7A8A7886258280D700D0831A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8A7884258280D700D0831A /* LaunchScreen.storyboard */; };
 		7A8CDB9625828D5000B08C11 /* main.pd in Resources */ = {isa = PBXBuildFile; fileRef = 7A8CDB9525828D5000B08C11 /* main.pd */; };
-		7A8CDB9B2582BA8000B08C11 /* pd-manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CDB9A2582BA8000B08C11 /* pd-manager.swift */; };
+		7A8CDB9B2582BA8000B08C11 /* PDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CDB9A2582BA8000B08C11 /* PDManager.swift */; };
 		BADA80B7B24149F05A8B5C64 /* Pods_SynthPD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6E9A33FE9BC8C2E2CC8E59 /* Pods_SynthPD.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		7A8A7885258280D700D0831A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A8A7887258280D700D0831A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A8CDB9525828D5000B08C11 /* main.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.pd; sourceTree = "<group>"; };
-		7A8CDB9A2582BA8000B08C11 /* pd-manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "pd-manager.swift"; sourceTree = "<group>"; };
+		7A8CDB9A2582BA8000B08C11 /* PDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDManager.swift; sourceTree = "<group>"; };
 		CD6E9A33FE9BC8C2E2CC8E59 /* Pods_SynthPD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SynthPD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,25 +84,57 @@
 		7A8A7878258280D500D0831A /* SynthPD */ = {
 			isa = PBXGroup;
 			children = (
-				7A8CDB992582BA2E00B08C11 /* pd-manager */,
-				7A8CDB9525828D5000B08C11 /* main.pd */,
 				7A8A7879258280D500D0831A /* AppDelegate.swift */,
 				7A8A787B258280D500D0831A /* SceneDelegate.swift */,
-				7A8A787D258280D500D0831A /* ViewController.swift */,
-				7A8A787F258280D500D0831A /* Main.storyboard */,
+				7A8CDBC42582C88000B08C11 /* model */,
+				7A8CDBC52582C88600B08C11 /* view */,
+				7A8CDBC62582C88D00B08C11 /* controller */,
 				7A8A7882258280D700D0831A /* Assets.xcassets */,
-				7A8A7884258280D700D0831A /* LaunchScreen.storyboard */,
 				7A8A7887258280D700D0831A /* Info.plist */,
 			);
 			path = SynthPD;
 			sourceTree = "<group>";
 		};
-		7A8CDB992582BA2E00B08C11 /* pd-manager */ = {
+		7A8CDBC42582C88000B08C11 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				7A8CDB9A2582BA8000B08C11 /* pd-manager.swift */,
+				7A8CDBC82582C8F300B08C11 /* Pure Data */,
 			);
-			path = "pd-manager";
+			path = model;
+			sourceTree = "<group>";
+		};
+		7A8CDBC52582C88600B08C11 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7A8A7884258280D700D0831A /* LaunchScreen.storyboard */,
+				7A8A787F258280D500D0831A /* Main.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7A8CDBC62582C88D00B08C11 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				7A8A787D258280D500D0831A /* ViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		7A8CDBC72582C8B100B08C11 /* Patch Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A8CDB9525828D5000B08C11 /* main.pd */,
+			);
+			path = "Patch Files";
+			sourceTree = "<group>";
+		};
+		7A8CDBC82582C8F300B08C11 /* Pure Data */ = {
+			isa = PBXGroup;
+			children = (
+				7A8CDB9A2582BA8000B08C11 /* PDManager.swift */,
+				7A8CDBC72582C8B100B08C11 /* Patch Files */,
+			);
+			path = "Pure Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +255,7 @@
 				7A8A787E258280D500D0831A /* ViewController.swift in Sources */,
 				7A8A787A258280D500D0831A /* AppDelegate.swift in Sources */,
 				7A8A787C258280D500D0831A /* SceneDelegate.swift in Sources */,
-				7A8CDB9B2582BA8000B08C11 /* pd-manager.swift in Sources */,
+				7A8CDB9B2582BA8000B08C11 /* PDManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
