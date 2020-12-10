@@ -17,10 +17,7 @@ class PDManager {
         self.controller = PdAudioController()
     }
     
-    func setup(<#parameters#>) -> <#return type#> {
-        <#function body#>
-    }
-    
+
     func start() {
         self.controller.isActive = true
     }
