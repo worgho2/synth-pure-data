@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A8236D325838BF800EB661D /* MainPDPatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8236D225838BF800EB661D /* MainPDPatch.swift */; };
+		7A8236D9258397F900EB661D /* logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8236D8258397F900EB661D /* logger.swift */; };
 		7A8A787A258280D500D0831A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8A7879258280D500D0831A /* AppDelegate.swift */; };
 		7A8A787C258280D500D0831A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8A787B258280D500D0831A /* SceneDelegate.swift */; };
 		7A8A787E258280D500D0831A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8A787D258280D500D0831A /* ViewController.swift */; };
@@ -15,12 +17,15 @@
 		7A8A7886258280D700D0831A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8A7884258280D700D0831A /* LaunchScreen.storyboard */; };
 		7A8CDB9625828D5000B08C11 /* main.pd in Resources */ = {isa = PBXBuildFile; fileRef = 7A8CDB9525828D5000B08C11 /* main.pd */; };
 		7A8CDB9B2582BA8000B08C11 /* PDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CDB9A2582BA8000B08C11 /* PDManager.swift */; };
+		7A8CDBD22582CD8600B08C11 /* PDPatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CDBD12582CD8600B08C11 /* PDPatch.swift */; };
 		BADA80B7B24149F05A8B5C64 /* Pods_SynthPD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6E9A33FE9BC8C2E2CC8E59 /* Pods_SynthPD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		55FDC0C00A83A767033F528F /* Pods-SynthPD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynthPD.debug.xcconfig"; path = "Target Support Files/Pods-SynthPD/Pods-SynthPD.debug.xcconfig"; sourceTree = "<group>"; };
 		6B22A62FF0177BDADC24A629 /* Pods-SynthPD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynthPD.release.xcconfig"; path = "Target Support Files/Pods-SynthPD/Pods-SynthPD.release.xcconfig"; sourceTree = "<group>"; };
+		7A8236D225838BF800EB661D /* MainPDPatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPDPatch.swift; sourceTree = "<group>"; };
+		7A8236D8258397F900EB661D /* logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logger.swift; sourceTree = "<group>"; };
 		7A8A7876258280D500D0831A /* SynthPD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SynthPD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8A7879258280D500D0831A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A8A787B258280D500D0831A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +36,7 @@
 		7A8A7887258280D700D0831A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A8CDB9525828D5000B08C11 /* main.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.pd; sourceTree = "<group>"; };
 		7A8CDB9A2582BA8000B08C11 /* PDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDManager.swift; sourceTree = "<group>"; };
+		7A8CDBD12582CD8600B08C11 /* PDPatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDPatch.swift; sourceTree = "<group>"; };
 		CD6E9A33FE9BC8C2E2CC8E59 /* Pods_SynthPD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SynthPD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -61,6 +67,14 @@
 				6B22A62FF0177BDADC24A629 /* Pods-SynthPD.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7A8236D7258397EE00EB661D /* logger */ = {
+			isa = PBXGroup;
+			children = (
+				7A8236D8258397F900EB661D /* logger.swift */,
+			);
+			path = logger;
 			sourceTree = "<group>";
 		};
 		7A8A786D258280D500D0831A = {
@@ -98,7 +112,8 @@
 		7A8CDBC42582C88000B08C11 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				7A8CDBC82582C8F300B08C11 /* Pure Data */,
+				7A8236D7258397EE00EB661D /* logger */,
+				7A8CDBC82582C8F300B08C11 /* pure data */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -120,21 +135,23 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
-		7A8CDBC72582C8B100B08C11 /* Patch Files */ = {
+		7A8CDBC72582C8B100B08C11 /* patch files */ = {
 			isa = PBXGroup;
 			children = (
 				7A8CDB9525828D5000B08C11 /* main.pd */,
 			);
-			path = "Patch Files";
+			path = "patch files";
 			sourceTree = "<group>";
 		};
-		7A8CDBC82582C8F300B08C11 /* Pure Data */ = {
+		7A8CDBC82582C8F300B08C11 /* pure data */ = {
 			isa = PBXGroup;
 			children = (
 				7A8CDB9A2582BA8000B08C11 /* PDManager.swift */,
-				7A8CDBC72582C8B100B08C11 /* Patch Files */,
+				7A8CDBD12582CD8600B08C11 /* PDPatch.swift */,
+				7A8236D225838BF800EB661D /* MainPDPatch.swift */,
+				7A8CDBC72582C8B100B08C11 /* patch files */,
 			);
-			path = "Pure Data";
+			path = "pure data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,9 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A8CDBD22582CD8600B08C11 /* PDPatch.swift in Sources */,
 				7A8A787E258280D500D0831A /* ViewController.swift in Sources */,
 				7A8A787A258280D500D0831A /* AppDelegate.swift in Sources */,
+				7A8236D325838BF800EB661D /* MainPDPatch.swift in Sources */,
 				7A8A787C258280D500D0831A /* SceneDelegate.swift in Sources */,
+				7A8236D9258397F900EB661D /* logger.swift in Sources */,
 				7A8CDB9B2582BA8000B08C11 /* PDManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

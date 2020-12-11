@@ -17,23 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="72N-6b-42s">
-                                <rect key="frame" x="183" y="345" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="On" translatesAutoresizingMaskIntoConstraints="NO" id="72N-6b-42s">
+                                <rect key="frame" x="182.5" y="437.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="onSwtich:" destination="BYZ-38-t0r" eventType="valueChanged" id="293-1i-vet"/>
                                 </connections>
                             </switch>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wYC-ah-8os">
-                                <rect key="frame" x="82" y="605" width="273" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="arrowshape.turn.up.left.fill" catalog="system" maximumValueImage="arrowshape.turn.up.right.fill" translatesAutoresizingMaskIntoConstraints="NO" id="wYC-ah-8os">
+                                <rect key="frame" x="39.5" y="569.5" width="335" height="31"/>
                                 <connections>
                                     <action selector="onSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="vBK-t5-x1w"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On / Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="238-EX-ROz">
+                                <rect key="frame" x="177" y="396.5" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xFade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9S-Iq-wQq">
+                                <rect key="frame" x="184" y="528.5" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wYC-ah-8os" firstAttribute="top" secondItem="U9S-Iq-wQq" secondAttribute="bottom" constant="20" id="2F8-nA-rTQ"/>
+                            <constraint firstItem="238-EX-ROz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="F45-o4-Hm2"/>
+                            <constraint firstItem="72N-6b-42s" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Q1i-Mp-nOR"/>
+                            <constraint firstItem="U9S-Iq-wQq" firstAttribute="top" secondItem="72N-6b-42s" secondAttribute="bottom" constant="60" id="RCw-7k-1eJ"/>
+                            <constraint firstItem="wYC-ah-8os" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SFo-9g-bYV"/>
+                            <constraint firstItem="wYC-ah-8os" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="WlW-7g-pcY"/>
+                            <constraint firstItem="72N-6b-42s" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hIL-3b-Oef"/>
+                            <constraint firstItem="72N-6b-42s" firstAttribute="top" secondItem="238-EX-ROz" secondAttribute="bottom" constant="20" id="shC-vK-vNg"/>
+                            <constraint firstItem="U9S-Iq-wQq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wtn-a2-R6X"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -42,6 +63,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
