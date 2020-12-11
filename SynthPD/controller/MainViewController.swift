@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  SynthPD
 //
 //  Created by otavio on 10/12/20.
@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     let manager: PDManager = PDManager.instance
     
@@ -17,12 +17,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onSwtich(_ sender: UISwitch) {
-        manager.mainPatch.setOnOffReceiverTo(sender.isOn)
+//        manager.mainPatch.setOnOffReceiverTo(sender.isOn)
     }
     
     
     @IBAction func onSlider(_ sender: UISlider) {
-        manager.mainPatch.setXFadeReceiverTo(sender.value)
+//        manager.mainPatch.setXFadeReceiverTo(sender.value)
     }
 }
 
