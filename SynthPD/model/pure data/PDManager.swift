@@ -12,11 +12,13 @@ class PDManager {
     static let instance = PDManager()
 
     let controller: PdAudioController = PdAudioController()
-    let mainPatch: MainPDPatch = MainPDPatch()
+//    let mainPatch: MainPDPatch = MainPDPatch()
+    let amlPatch: AmlPDPatch = AmlPDPatch()
     
     private init() {
         setup()
-        mainPatch.openFile()
+//        mainPatch.openFile()
+        amlPatch.openFile()
     }
     
     private func setup() {
